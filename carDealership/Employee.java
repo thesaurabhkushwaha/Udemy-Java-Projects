@@ -62,6 +62,12 @@ public class Employee {
 		System.out.println("Transaction successful !");
 		System.out.println(v.getManufacturer()+" "+v.getModelName()+" is now owned by "+c.getName());
 	}
+
+	public String toString() {
+		return "Employee [name=" + name + ", ID=" + ID + ", ExperienceInYears=" + ExperienceInYears + "]";
+	}
+	
+	
 	
 	
 

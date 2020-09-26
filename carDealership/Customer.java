@@ -6,7 +6,7 @@ public class Customer {
 	private double cashOnHand;
 	
 	Customer(){}
-	
+
 	public Customer(String name, String address, double cashOnHand) {
 		super();
 		this.name = name;
@@ -42,6 +42,9 @@ public class Customer {
 	{
 		emp.handleCustomer(this, vehicle, finance);
 	}
-
+	
+	public String toString() {
+		return "Customer [name=" + name + ", address=" + address + ", cashOnHand=" + cashOnHand + "]";
+	}
 	
 }

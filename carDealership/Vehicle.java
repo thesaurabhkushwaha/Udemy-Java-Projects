@@ -58,6 +58,12 @@ public class Vehicle {
 	public void setPrice(double price) {
 		Price = price;
 	}
+
+	public String toString() {
+		return "Vehicle [Manufacturer=" + Manufacturer + ", ModelName=" + ModelName + ", VehicleType=" + VehicleType
+				+ ", Color=" + Color + ", FuelType=" + FuelType + ", Price=" + Price + "]";
+	}
+	
 	
 	
 }
