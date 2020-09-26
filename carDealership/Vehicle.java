@@ -8,6 +8,18 @@ public class Vehicle {
 	private String FuelType;
 	private double Price;
 	
+	Vehicle(){}
+	public Vehicle(String manufacturer, String modelName, String vehicleType, String color, String fuelType,
+			double price) 
+	{
+		super();
+		Manufacturer = manufacturer;
+		ModelName = modelName;
+		VehicleType = vehicleType;
+		Color = color;
+		FuelType = fuelType;
+		Price = price;
+	}
 	
 	public String getManufacturer() {
 		return Manufacturer;
@@ -30,6 +42,7 @@ public class Vehicle {
 	public void setFuelType(String fuelType) {
 		FuelType = fuelType;
 	}
+	
 	public void setVehicleType(String vehicleType) {
 		VehicleType = vehicleType;
 	}

@@ -5,7 +5,13 @@ public class Employee {
 	private String ID;
 	private double ExperienceInYears;
 	
-	
+	Employee(){}
+	public Employee(String name, String iD, double experienceInYears) {
+		super();
+		this.name = name;
+		ID = iD;
+		ExperienceInYears = experienceInYears;
+	}
 	public String getName() {
 		return name;
 	}
