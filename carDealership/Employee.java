@@ -66,6 +66,42 @@ public class Employee {
 	public String toString() {
 		return "Employee [name=" + name + ", ID=" + ID + ", ExperienceInYears=" + ExperienceInYears + "]";
 	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(ExperienceInYears);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((ID == null) ? 0 : ID.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (Double.doubleToLongBits(ExperienceInYears) != Double.doubleToLongBits(other.ExperienceInYears))
+			return false;
+		if (ID == null) {
+			if (other.ID != null)
+				return false;
+		} else if (!ID.equals(other.ID))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+	
+	
 	
 	
 	
